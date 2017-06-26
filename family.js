@@ -29,11 +29,14 @@ var family = [
     { id: 'iAntonio', name: 'Antonio (1923)',
       spouse: { id: 'iJoaquina', name: 'Joaquina' },
       children: [
-        { id: 'iTonyin', name: 'Toñin' },
-        { id: 'iTrini', name: 'Trini' },
-        { id: 'iSergio', name: 'Sergio' },
-        { id: 'iMaite', name: 'Maite' },
-        { id: 'iViena', name: 'Viena' },
+        { id: 'iTonyin', name: 'Toñin',
+          spouse: { id: 'iTrini', name: 'Trini' },
+          children: [
+            { id: 'iSergio', name: 'Sergio' },
+            { id: 'iMaite', name: 'Maite' },
+            { id: 'iViena', name: 'Viena' }
+          ]
+        },
         { id: 'iMaripau',
           gen: 'fills',
           img: 'http://usuaris.tinet.cat/sag/imatges/altree/maripau.png',
@@ -45,7 +48,8 @@ var family = [
           children: [
             { id: 'iSandra', name: 'Sandra' },
             { id: 'iOriolSandra', name: 'Oriol' } 
-          ]}
+          ]
+         }
     ]},
     { id: 'iJoseMaria', name: 'Jose Maria (1927)',
       spouse: { id: 'iJosefina', name: 'Josefina' },
