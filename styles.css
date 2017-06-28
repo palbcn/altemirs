@@ -129,6 +129,14 @@ footer img {
   position:relative;
   min-height:120px;
   margin: 0;
+  clear:both;
+}
+
+.member.collapsable::before {
+  --content:'+';  
+}
+.member.collapsable {
+
 }
 
 .member .filler {
