@@ -96,6 +96,7 @@ main section article {
 
 /*****************************************************************************/
 footer {
+  clear:both;
   background: #333;
   color: #999;
   min-height: 120px;
@@ -125,6 +126,7 @@ footer img {
 
 .member {
   display:block;
+  position:relative;
   min-height:120px;
   margin: 0;
 }
@@ -132,7 +134,7 @@ footer img {
 .member .filler {
   min-height:100px; 
   float:left;  
-  position:relative;
+  clear:both;
 }
 
 .member img.person {
@@ -150,8 +152,7 @@ footer img {
 }
 
 .member p.name {
-  display:inline-block;
-  margin-top:34px;
-  font-size: 1.2rem;
- 
+  display:block;
+  float:left;
+  margin-top:36px;
 }

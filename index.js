@@ -3,7 +3,7 @@ var imgwidth = 100;
 
 function showMember($container,member,indentation,isSpouse) {
   
-  var $member =  $('<div class="member"/>');
+  var $member =  $('<div id="'+member.id+'" class="member"/>');
   
   var $filler = $('<div class="filler"/>');
   $filler.width(indentation*imgwidth);
@@ -26,12 +26,14 @@ function showMember($container,member,indentation,isSpouse) {
   $container.append($member);
   
   if (member.children) {
-    member.children.map ( m => showMember($container,m,indentation+1,false));
+    var $children = $('<div id="childrenof-'+member.id+'" class="children"/>');
+    $container.append($children);
+    member.children.map ( m => showMember($children,m,indentation+1,false));
   }
 }
 
 $(function() {
-  var $treemap = $("#treemap");
-  imgwidth = $("#avis").width();
+  var $treemap = $("#treemaproot");
+  imgwidth = $("#img-iAvis").width();
   family.map( m => showMember($treemap,m,1,false) );
 });
